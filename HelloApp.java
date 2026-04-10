@@ -3,21 +3,14 @@ class HelloApp {
 
         // If no arguments
         if (args.length == 0) {
-            System.out.println("Hello World!");
+            System.out.println("Hello, World!");
             return;
         }
 
-        String result = "Hello ";
+        // Join all names with comma
+        String names = String.join(", ", args);
 
-        // Enhanced for loop
-        for (String name : args) {
-            result += name + " ";
-        }
-
-        // Remove last ", " using substring
-        result = result.substring(0, result.length() - 2);
-
-        // Print final result
-        System.out.println(result);
+        // Print greeting
+        System.out.println("Hello " + names);
     }
 }
